@@ -1,6 +1,7 @@
 from __future__ import print_function
 import tensorflow as tf
 
+import sys
 import argparse
 import time
 import os
@@ -21,13 +22,13 @@ def main():
                         help='directory to store tensorboard logs')
     parser.add_argument('--rnn_size', type=int, default=128,
                         help='size of RNN hidden state')
-    parser.add_argument('--num_layers', type=int, default=2,
+    parser.add_argument('--num_layers', type=int, default=3,
                         help='number of layers in the RNN')
     parser.add_argument('--model', type=str, default='lstm',
                         help='rnn, gru, lstm, or nas')
-    parser.add_argument('--batch_size', type=int, default=50,
+    parser.add_argument('--batch_size', type=int, default=128,
                         help='minibatch size')
-    parser.add_argument('--seq_length', type=int, default=50,
+    parser.add_argument('--seq_length', type=int, default=100,
                         help='RNN sequence length')
     parser.add_argument('--num_epochs', type=int, default=50,
                         help='number of epochs')

@@ -91,5 +91,6 @@ ENV/
 .ropeproject
 
 # char-rnn-tensorflow data files
-data.npy
-vocab.pkl
+save/
+logs/
+data/*/*
